@@ -1,7 +1,7 @@
 import * as React from "react";
-import AuthenticationContext, { AuthnticationContextData } from "./AuthenticationContext";
+import { AuthenticationContext, AuthnticationContextData } from "./AuthenticationContext";
 
-class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
+export class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
     static displayName = NotAuthorized.name;
 
     render() {
@@ -15,8 +15,6 @@ class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
     }
 
 }
-
-export default NotAuthorized;
 
 type NotAuthorizedInternalProps = {
     children?: JSX.Element;

@@ -7,7 +7,7 @@ import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import AuthorizeView from './components/AuthorizeView';
+import { AuthorizeView } from './components/AuthorizeView';
 import AppRoutes from './components/site/AppRoutes';
 import { Layout } from './components/site/Layout';
 import { UserContext } from './components/site/UserContext';

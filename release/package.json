@@ -1,6 +1,6 @@
 {
   "name": "forge-security-jwt-client-web-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Client side JWT based React authentication",
   "author": "Zoltan Juhasz",
   "main": "./build/bundle.js",
@@ -17,13 +17,13 @@
   ],
   "peerDependencies": {},
   "dependencies": {
-    "jzo-library": "1.0.6",
-    "forge-security-jwt-client-web": "1.0.4",
+    "jzo-library": "^1.0.6",
+    "forge-security-jwt-client-web": "^1.0.6",
     "react": "^17.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JZO001/Forge.Security.Jwt.Client.Web"
+    "url": "https://github.com/JZO001/Forge.Security.Jwt.Client.Web.React"
   },
   "scripts": {
     "build": "rimraf ./build && webpack --config webpack.config.js",

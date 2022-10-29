@@ -76,5 +76,10 @@ module.exports = {
         }
       })
     ]
+  },
+  externals: {
+    "jzo-library": "jzo-library",
+    "react": "react",
+    "forge-security-jwt-client-web": "forge-security-jwt-client-web"
   }
 }
