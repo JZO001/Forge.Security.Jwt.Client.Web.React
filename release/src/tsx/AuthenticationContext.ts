@@ -4,8 +4,6 @@ export type AuthnticationContextData = {
     isAuthenticated: boolean;
 }
 
-const AuthenticationContext = React.createContext({
+export const AuthenticationContext = React.createContext({
     isAuthenticated: false
 }) as React.Context<AuthnticationContextData>;
-
-export default AuthenticationContext;

@@ -1,5 +1,5 @@
 export type { AuthnticationContextData } from "./tsx/AuthenticationContext";
-export * from "./tsx/AuthenticationContext";
-export * from "./tsx/Authorized";
-export * from "./tsx/AuthorizeView";
-export * from "./tsx/NotAuthorized";
+export { AuthenticationContext } from "./tsx/AuthenticationContext";
+export { Authorized } from "./tsx/Authorized";
+export { AuthorizeView } from "./tsx/AuthorizeView";
+export { NotAuthorized } from "./tsx/NotAuthorized";

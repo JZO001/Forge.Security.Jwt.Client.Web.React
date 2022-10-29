@@ -1,6 +1,6 @@
 {
   "name": "forge-security-jwt-client-web-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client side JWT based React authentication",
   "author": "Zoltan Juhasz",
   "main": "./build/bundle.js",

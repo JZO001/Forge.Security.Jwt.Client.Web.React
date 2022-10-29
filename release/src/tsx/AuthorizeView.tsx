@@ -1,12 +1,12 @@
 import { AuthenticationStateChangedEventArgs, ServiceStore } from "forge-security-jwt-client-web";
 import * as React from "react";
-import AuthenticationContext from "./AuthenticationContext";
+import { AuthenticationContext } from "./AuthenticationContext";
 
 type AuthorizeViewState = {
     isAuthenticated: boolean
 }
 
-class AuthorizeView extends React.Component<{ children?: JSX.Element }, AuthorizeViewState> {
+export class AuthorizeView extends React.Component<{ children?: JSX.Element }, AuthorizeViewState> {
     static displayName = AuthorizeView.name;
 
     state = {
@@ -36,5 +36,3 @@ class AuthorizeView extends React.Component<{ children?: JSX.Element }, Authoriz
     }
 
 }
-
-export default AuthorizeView;
