@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AuthenticationContext, AuthnticationContextData } from "./AuthenticationContext";
+import { AuthenticationContext, AuthenticationContextData } from "./AuthenticationContext";
 
 export class Authorized extends React.Component<{ children?: JSX.Element }> {
     static displayName = Authorized.name;
@@ -8,7 +8,7 @@ export class Authorized extends React.Component<{ children?: JSX.Element }> {
         return (
             <AuthenticationContext.Consumer>
                 {
-                    (authContext: AuthnticationContextData) => <AuthorizedInternal authContext={authContext} {...this.props} />
+                    (authContext: AuthenticationContextData) => <AuthorizedInternal authContext={authContext} {...this.props} />
                 }
             </AuthenticationContext.Consumer>
         );
@@ -18,7 +18,7 @@ export class Authorized extends React.Component<{ children?: JSX.Element }> {
 
 type AuthorizedInternalProps = {
     children?: JSX.Element;
-    authContext: AuthnticationContextData;
+    authContext: AuthenticationContextData;
 }
 
 class AuthorizedInternal extends React.Component<AuthorizedInternalProps> {
