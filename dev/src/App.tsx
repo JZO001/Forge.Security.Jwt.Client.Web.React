@@ -34,7 +34,7 @@ export default class App extends React.Component<{}> {
 
 	render() {
 		return (
-			<AuthorizeView>
+			<AuthorizeView data={"hello"}>
 				<Layout>
 					<Routes>
 						{AppRoutes.map((route, index) => {

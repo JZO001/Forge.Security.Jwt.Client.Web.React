@@ -7,7 +7,7 @@ type AuthorizeViewState = {
     data: any
 }
 
-export class AuthorizeView extends React.Component<{ children?: JSX.Element }, AuthorizeViewState> {
+export class AuthorizeView extends React.Component<{ data?: any, children?: JSX.Element }, AuthorizeViewState> {
     static displayName = AuthorizeView.name;
 
     state = {
