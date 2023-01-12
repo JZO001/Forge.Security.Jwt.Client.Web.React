@@ -1,18 +1,27 @@
 import { AuthenticationStateChangedEventArgs, ServiceStore } from "forge-security-jwt-client-web";
+import { ObjectBase } from "jzo-library";
 import * as React from "react";
 import { AuthenticationContext, AuthenticationContextDataExternal } from "./AuthenticationContext";
+
+type AuthorizeViewProps = {
+    data?: any,
+    children?: JSX.Element
+}
 
 type AuthorizeViewState = {
     isAuthenticated: boolean,
     data: any
 }
 
-export class AuthorizeView extends React.Component<{ data?: any, children?: JSX.Element }, AuthorizeViewState> {
+export class AuthorizeView extends React.Component<AuthorizeViewProps, AuthorizeViewState> {
     static displayName = AuthorizeView.name;
 
-    state = {
-        isAuthenticated: ServiceStore.jwtTokenAuthenticationStateProvider.getAuthenticationState().user.identity.isAuthenticated,
-        data: null as any
+    constructor(props: AuthorizeViewProps) {
+        super(props);
+        this.state = {
+            isAuthenticated: ServiceStore.jwtTokenAuthenticationStateProvider.getAuthenticationState().user.identity.isAuthenticated,
+            data: ObjectBase.IsUndefinedOrNull(props.data) ? null : props.data
+        }
     }
 
     componentDidMount(): void {
